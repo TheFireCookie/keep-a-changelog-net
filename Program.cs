@@ -1,5 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Spectre.Console;
+﻿using Spectre.Console;
+using Spectre.Console.Cli;
 
-AnsiConsole.WriteLine("Hello, World!");
-var name = AnsiConsole.Ask<string>("What's your [green]name[/]?");
+var app = new CommandApp();
+
+app.Configure(c =>
+{
+    c
+    .AddCommand<ValidateCommand>("validate")
+    .WithAlias("v")
+    .WithDescription("Validate a CHANGELOG.md file");
+    c.AddCommand<UpdateCommand>("update")
+    .WithAlias("u")
+    .WithDescription("Update a CHANGELOG.md file, thus replacing Unreleased by the next version");
+});
+
+AnsiConsole.Write(new FigletText("Keep a Changelog.NET").Centered().Color(Color.Aqua));
+await app.RunAsync(args);

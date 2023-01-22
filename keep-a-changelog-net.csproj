@@ -9,10 +9,11 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>kac</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Spectre.Console" Version="0.46.0" />
+    <PackageReference Include="Spectre.Console.Cli" Version="0.46.0" />
     <PackageReference Include="Spectre.Console.Analyzer" Version="0.46.0" />
   </ItemGroup>
 
