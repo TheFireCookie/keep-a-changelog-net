@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+		<RootNamespace>Keep.A.Changelog.Net</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackAsTool>true</PackAsTool>
+		<LangVersion>latest</LangVersion>
+		<ToolCommandName>kac</ToolCommandName>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<Version>0.0.1</Version>
+		<Nullable>enable</Nullable>
+		<Authors>TheFireCookie</Authors>
+		<Company>TheFireCookie</Company>
+		<Copyright>TheFireCookie</Copyright>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/TheFireCookie/keep-a-changelog-net</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Spectre.Console.Cli" Version="0.48.0" />
+		<PackageReference Include="Markdig.Signed" Version="0.34.0" />
+		<PackageReference Include="Spectre.Console.Analyzer" Version="0.48.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>

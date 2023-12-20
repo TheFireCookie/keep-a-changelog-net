@@ -8,10 +8,7 @@ app.Configure(c =>
     c
     .AddCommand<ValidateCommand>("validate")
     .WithAlias("v")
-    .WithDescription("Validate a CHANGELOG.md file");
-    c.AddCommand<UpdateCommand>("update")
-    .WithAlias("u")
-    .WithDescription("Update a CHANGELOG.md file, thus replacing Unreleased by the next version");
+    .WithDescription("Validate a CHANGELOG.md file syntax");
 });
 
 AnsiConsole.Write(new FigletText("Keep a Changelog.NET").Centered().Color(Color.Aqua));
